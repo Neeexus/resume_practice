@@ -70,9 +70,81 @@
 ---
 
 # 대학성적 요약
-<img src = grade.JPG height = 100 wight = 100>
+<img src = grade.JPG height = 150 wight = 100>
 
 총 취득학점 : 87 평점평균 : 3.99
 
 ---
 
+# 대학 생활 참여 프로젝트들
+## 자바를 사용한 해시테이블 구현
+```java
+public class LinearProbing<K,V> {
+	private int M = 13;
+	private K[] a = (K[]) new Object[M];
+	private V[] d = (V[]) new Object[M];
+	private int hash(K key) {
+		return (key.hashCode() & 0x7fffffff) % M; 
+	}
+	public void put(K key, V data) {
+		int initialpos = hash(key);
+		int i = initialpos, j = 1;
+		do {
+			if(a[i]==null) {
+				a[i]=key;
+				d[i]=data;
+				return;
+			}
+			if(a[i].equals(key)) {
+				d[i] = data;
+				return;
+			}
+			i=(initialpos + j++)%M;
+		}while(i!=initialpos);
+	}
+	public V get(K key) {
+		int initialpos = hash(key);
+		int i = initialpos, j = 1;
+		do {
+			if(a[i].equals(key)) return d[i];
+			i = (initialpos+j++)%M;
+		}while(a[i] != null && i!=initialpos);
+		return null;
+	}
+	public V delete(K key) {
+		int initialpos = hash(key);
+		int i = initialpos, j = 1;
+		do {
+			if(a[i].equals(key)) a[i]=null; d[i]=null;
+			i = (initialpos+j++)%M;
+		}while(a[i] != null && i!=initialpos);
+		return null;
+	}
+	public void print() {
+		for(int i = 0 ; i<M ; i++) {
+			System.out.print(i+"\t");
+		}
+		System.out.println();
+		for(int j = 0 ; j<M ; j++) {
+			System.out.print(a[j]+"\t");
+		}				
+	}
+}
+```
+* 자바언어를 사용하여 해시테이블 구조에 대해 이해하고 해시테이블을 직접 구현하였다.
+
+## 파이썬을 사용한 레드와인 품질 예측 및 분류
+
+<img src = data.JPG height = 360 wight = 100>
+
+* [kaggle](https://www.kaggle.com) 에서 수집한 레드 와인 데이터로 와인의 품질을 예측
+* scikit-learn을 사용하여 최상의 데이터 예측 도구를 찾음
+* 분류한 예측 도구를 가지고 세부 튜닝을 하여 와인의 품질예측의 질을 더욱 높임
+
+## 유니티를 사용한 VR게임 개발
+
+<img src = unity.JPG height = 320 wight = 100>
+
+* 플레이어가 방안의 불을 끄고 다시 키면 방안의 바뀐 물체를 찾는 VR기반 게임
+* C# 언어를 사용 하여 구현
+* 유니티 엔진을 사용한 게임개발
