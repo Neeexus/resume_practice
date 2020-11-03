@@ -13,7 +13,7 @@
 
 ---
 # 학력
-<img src = school.jpg height = 200 wight = 300>
+<img src = school.JPG height = 150 wight = 150>
 
 |재학기간|학력사항|전공|
 |---|---|---|
@@ -54,3 +54,25 @@
 7. R
 
 ---
+# Call
+* Email : dudah0776@gmail.com
+* github : [https://github.com/dudah0776](https://github.com/dudah0776)
+---
+
+# 보유 기술 및 사용도구
+<img src = language.JPG height = 80 wight = 100>
+
+* 주로 사용하는 언어는 Java, python 입니다.
+* python, R 언어를 사용하여 데이터 전처리 및 시각화를 할 수 있습니다.
+* python, R 언어를 사용하여 데이터 분석 및 머신러닝을 할 수 있습니다.
+* 유니티의 사용법에 대해 알고 있습니다.
+* 리눅스를 통하여 시스템에 관한 간단한 프로그래밍을 할 수 있습니다.
+---
+
+# 대학성적 요약
+<img src = grade.JPG height = 100 wight = 100>
+
+총 취득학점 : 87 평점평균 : 3.99
+
+---
+
